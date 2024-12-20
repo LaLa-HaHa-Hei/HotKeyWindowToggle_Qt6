@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>HotKeyWindowToggle</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="HotKeyWindowToggle.qrc">
+    <normaloff>:/img/Assets/32.ico</normaloff>:/img/Assets/32.ico</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
@@ -435,6 +439,8 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="HotKeyWindowToggle.qrc"/>
+ </resources>
  <connections/>
 </ui>

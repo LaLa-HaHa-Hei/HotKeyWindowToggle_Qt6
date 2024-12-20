@@ -231,7 +231,7 @@ bool MainWindow::nativeEvent(const QByteArray &eventType, void *message, qintptr
 {
     MSG* msg = reinterpret_cast<MSG*>(message);
     // 热键被按下，切换窗口状态
-    if (_isRegistered && msg->message == WM_HOTKEY && static_cast<int>(msg->wParam) == _hotKeyId)  // 热键ID
+    if (_isRegistered && msg->message == WM_HOTKEY && static_cast<int>(msg->wParam) == _hotKeyId && _targetWindowHandleList.size() != 0)  // 热键ID
     {
         ToggleWindowsVisibility();
         *result = 0;
